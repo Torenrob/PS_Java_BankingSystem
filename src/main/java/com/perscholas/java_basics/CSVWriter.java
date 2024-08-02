@@ -9,6 +9,7 @@ public class CSVWriter {
     public static void writeEmployeesToCSV(List<Employee> employees, String file) throws IOException {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
+
             employees.forEach(e -> {
                 try {
                     String line = e.toCSVString();
